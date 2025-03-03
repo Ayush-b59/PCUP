@@ -1,0 +1,128 @@
+<html>
+<head>
+    <title>Webpage Mockup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Dropdown Styles */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid black;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            min-width: 200px;
+            z-index: 1000;
+            border-radius: 8px;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 12px;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            white-space: nowrap;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: lightgray;
+        }
+
+        /* New Intro Paragraph Style */
+        .intro-paragraph {
+            font-size: 1rem; /* Equivalent to text-base */
+            color: black;
+            line-height: 1.75rem; /* Improved readability */
+            margin-bottom: 2rem; /* Space between paragraph and border */
+            padding: 0 1rem; /* Padding for better spacing */
+            text-align: justify; /* Neat alignment for large text blocks */
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body class="bg-white">
+
+    <header class="flex items-center justify-between px-4 py-2 shadow-md">
+        <div class="flex items-center">
+            <a href="Homepage.html">
+                <img src="logo.png" alt="Logo" class="w-16 h-16">
+            </a>
+        </div>
+
+        <nav class="flex-grow flex justify-center space-x-12 text-lg relative nav-links">
+            <div class="dropdown relative">
+                <div class="flex items-center space-x-1 cursor-pointer">
+                    <span>Student Resources</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="dropdown-menu">
+                    <a href="subpage.html">At-Home Workout</a>
+                    <a href="Subpage 2.html">Gym Workout</a>
+                </div>
+            </div>
+
+            <div class="dropdown relative">
+                <div class="flex items-center space-x-1 cursor-pointer">
+                    <span>Teacher Resources</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="dropdown-menu">
+                    <a href="subpage 3.html">Classroom Exercises</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="flex items-center border border-black px-3 py-1 rounded">
+            <input type="text" placeholder="Search" class="border-none outline-none w-32">
+            <button class="text-black"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <div class="max-w-5xl mx-auto px-6 py-10 min-h-screen">
+
+               <!-- Top Border Line -->
+        <div class="flex justify-between items-center">
+            <div class="border border-black w-full mb-10"></div>
+        </div>
+
+        <!-- First Content Block -->
+        <div class="grid grid-cols-2 gap-12">
+            <div>
+                <p class="text-base text-black leading-relaxed">
+                    Classroom exercises are quick movements that combat the effects of prolonged sitting. Simple stretches like shoulder rolls, leg stretches, and desk twists require no equipment and can be done during short breaks. These activities improve circulation, reduce stiffness, and boost concentration, helping students re-engage with lessons more effectively. Regular movement breaks also alleviate physical discomfort that can distract students during class. By incorporating these exercises into the school day, teachers promote both immediate physical relief and long-term health benefits in a way that doesn’t disrupt learning.
+                </p>
+        
+            </div>
+            <div>
+                <img src="Resources/Images/Classroom.jpg" alt="students in" 
+                     class="w-full rounded-lg shadow-lg">
+                <p class="text-center mt-2 text-sm font-semibold text-black">Picture 6.1</p>
+            </div>
+        </div>
+
+        <!-- Second Content Block -->
+        <div class="mt-12 grid grid-cols-2 gap-12">
+            <div>
+                <img src="https://placehold.co/600x400" alt="Illustration with clouds in a blue sky above green hills" 
+                     class="w-full rounded-lg shadow-lg">
+                <p class="text-center mt-2 text-sm font-semibold text-black">Picture 6.2</p>
+            </div>
+            <div>
+                <p class="text-base text-black leading-relaxed"></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

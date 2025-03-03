@@ -1,0 +1,57 @@
+[
+    {
+      "page": "Homepage",
+      "url": "index.html",
+      "content": [
+        {
+          "section": "Introduction",
+          "text": "Students aged 14-18 often neglect their health due to academic pressure, which leads to decreased fitness levels and potential long-term health issues.",
+          "keywords": ["health", "fitness", "academic pressure", "students"]
+        },
+        {
+          "section": "Benefits of Exercise",
+          "text": "Regular exercise improves cardiovascular health, mental well-being, and overall fitness. In-class exercises and short breaks can significantly enhance focus.",
+          "keywords": ["exercise", "fitness", "health benefits", "in-class exercises", "mental well-being"]
+        }
+      ]
+    },
+    {
+      "page": "Student Subpage",
+      "url": "student_subpage.html",
+      "content": [
+        {
+          "section": "Do-at-home Exercises",
+          "text": "This section provides no-equipment exercises like jumping jacks, push-ups, and planks to improve overall fitness and health at home.",
+          "keywords": ["home workouts", "fitness", "no equipment", "health improvement"]
+        },
+        {
+          "section": "Gym Workout Planner",
+          "text": "Explore fitness-focused workouts that utilize basic gym equipment like treadmills, stationary bikes, and resistance machines to boost endurance and cardiovascular health.",
+          "keywords": ["gym workouts", "fitness planning", "endurance", "cardiovascular health"]
+        }
+      ]
+    },
+    {
+      "page": "Teacher Mainpage",
+      "url": "teacher_mainpage.html",
+      "content": [
+        {
+          "section": "Study Breaks & Health",
+          "text": "Teachers can help students manage stress by encouraging movement breaks and light classroom exercises to promote better health and academic focus.",
+          "keywords": ["study breaks", "classroom exercises", "student health", "stress management"]
+        }
+      ]
+    },
+    {
+      "page": "Teacher Subpage 1",
+      "url": "teacher_subpage1.html",
+      "content": [
+        {
+          "section": "In-class Exercises",
+          "text": "Simple in-class exercises like seated leg raises, shoulder rolls, and desk stretches improve student concentration without requiring any equipment.",
+          "keywords": ["in-class workouts", "student fitness", "no equipment", "concentration"]
+        }
+      ]
+    }
+  ]
+      

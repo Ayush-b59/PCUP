@@ -1,0 +1,199 @@
+<html>
+
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Dropdown Styles */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid black;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            min-width: 200px;
+            z-index: 1000;
+            border-radius: 8px;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 12px;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            white-space: nowrap;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: lightgray;
+        }
+
+        /* Main Layout with Flexbox */
+        .content-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 20px;
+        }
+
+        .section {
+            border: 2px solid black;
+            padding: 20px;
+            flex: 1 1 calc(50% - 16px); /* Two sections per row with gap */
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .top-right, .bottom-left {
+            align-items: flex-start;
+        }
+
+        /* Bottom Right Section with Image + Buttons */
+        .bottom-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .bottom-right img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid black;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .buttons-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .buttons-container a {
+            padding: 12px;
+            border: 2px solid black;
+            border-radius: 10px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .buttons-container a:hover {
+            background-color: lightgray;
+        }
+
+        blockquote {
+            font-size: 1.8rem;
+            font-style: italic;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                flex: 1 1 100%; /* Full width on smaller screens */
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white text-black font-sans">
+
+    <!-- Navigation Bar -->
+    <header class="flex items-center justify-between px-4 py-2 shadow-md">
+        <div class="flex items-center">
+            <a href="Homepage.html">
+                <img src="logo.png" alt="Logo" class="w-16 h-16">
+            </a>
+        </div>
+
+        <nav class="flex-grow flex justify-center space-x-12 text-lg relative nav-links">
+            <div class="dropdown relative">
+                <div class="flex items-center space-x-1 cursor-pointer">
+                    <span>Student Resources</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="dropdown-menu">
+                    <a href="subpage.html">At-Home Workout</a>
+                    <a href="Subpage 2.html">Gym Workout</a>
+                </div>
+            </div>
+
+            <div class="dropdown relative">
+                <div class="flex items-center space-x-1 cursor-pointer">
+                    <span>Teacher Resources</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="dropdown-menu">
+                    <a href="subpage 3.html">Classroom Exercises</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="flex items-center border border-black px-3 py-1 rounded">
+            <input type="text" placeholder="Search" class="border-none outline-none w-32">
+            <button class="text-black"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <!-- Content Sections -->
+    <main class="content-container">
+        <!-- Top Left: Quote -->
+        <section class="section">
+            <blockquote>
+                "Don't just exist, move and live"
+            </blockquote>
+        </section>
+
+        <!-- Top Right: Why sitting still is a problem -->
+        <section class="section top-right">
+            <div>
+                <h2 class="text-xl font-bold mb-2">Why sitting still is a problem</h2>
+                <p>Academic pressure often leads students to prioritize studying over physical activity. Extended hours of sitting, whether in classrooms or at home while studying, can negatively impact physical and mental health. Common short-term effects include muscle stiffness, back pain, and eye strain, while long-term consequences may involve obesity, poor cardiovascular health, and chronic fatigue. Prolonged inactivity can also reduce energy levels, making it harder to concentrate and perform well academically.</p>
+                <p>Ignoring physical health in pursuit of academic success can have lasting effects that persist into adulthood. Students who develop sedentary habits early are more likely to face serious health problems such as high blood pressure, type 2 diabetes, and heart disease later in life. Additionally, lack of movement can increase stress levels and contribute to mental health challenges like anxiety and depression.</p>
+                <p>Solving this problem involves recognizing that academic success and physical well-being are interconnected. Maintaining physical health improves not just fitness but also focus, memory, and mood—all of which are essential for effective learning. Taking steps to stay active, even in small ways, can have a significant impact on both current performance and future health outcomes.</p>
+            </div>
+        </section>
+
+        <!-- Bottom Left: How you can include fitness into daily life -->
+        <section class="section bottom-left">
+            <div>
+                <h2 class="text-xl font-bold mb-2">How you can include fitness into daily life</h2>
+                <p>Physical fitness is essential for overall well-being, helping improve endurance, strength, and mental clarity. For students, regular physical activity can enhance academic performance by increasing concentration, reducing stress, and improving sleep quality. Simple changes in daily routines can help incorporate fitness without requiring major time commitments.</p>
+                <p>Students can begin by engaging in short workouts at home, walking or cycling to school, or participating in extracurricular sports. Activities like jumping jacks, push-ups, and stretching exercises require no equipment and can be done between study sessions. For those seeking structured plans, gym workouts or online fitness classes provide options for targeted exercise.</p>
+                <p>Time management plays a key role in balancing studies with physical activity. Allocating just 20-30 minutes a day for movement can make a significant difference. Using fitness tracking apps or setting reminders can help develop consistent habits. Students should also focus on posture during study sessions, incorporating standing desks or taking breaks to stretch. Developing these habits early on promotes long-term health and ensures that academic responsibilities don’t come at the cost of physical well-being.
+
+                </p>
+            </div>
+        </section>
+
+        <!-- Bottom Right: Image + Buttons -->
+        <section class="section bottom-right">
+            <img src="Resources/Images/Yoga.jpg" alt="Yoga Exercise">
+            <div class="buttons-container">
+                <a href="subpage.html">At-Home Workout</a>
+                <a href="Subpage 2.html">Gym Workout</a>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

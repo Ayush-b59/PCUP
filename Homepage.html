@@ -1,0 +1,147 @@
+<html>
+
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Dropdown Styles */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid black;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            min-width: 200px;
+            z-index: 1000; /* Ensures it appears above other elements */
+            border-radius: 8px; /* Rounded corners */
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 12px;
+            text-decoration: none;
+            color: black;
+            text-align: center; /* Center text alignment */
+            white-space: nowrap;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: lightgray;
+        }
+
+        /* Fix Banner Overlapping */
+        .banner {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Quote Section Border */
+        .quote-container {
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .quote-border {
+            position: absolute;
+            top: 0.5rem;
+            left: 0;
+            width: 80%;
+            border-top: 2px solid black;
+            border-left: 2px solid black;
+            padding-left: 1rem;
+        }
+
+        /* Center Navigation Bar Text */
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-black font-sans">
+    <header class="flex items-center justify-between px-4 py-2 shadow-md">
+        <!-- Clickable Logo -->
+        <div class="flex items-center">
+            <a href="Homepage.html">
+                <img src="logo.png" alt="Logo" class="w-16 h-16"> <!-- Replace 'logo.png' with your actual logo file -->
+            </a>
+        </div>
+
+        <!-- Centered Navigation Bar -->
+        <nav class="flex-grow flex justify-center space-x-12 text-lg relative nav-links">
+            <!-- Student Resources Dropdown -->
+            <div class="dropdown relative">
+                <div class="flex items-center space-x-1 cursor-pointer">
+                    <span>Student Resources</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="dropdown-menu">
+                    <a href="subpage.html">At-Home Workout</a>
+                    <a href="Subpage 2.html">Gym Workout</a>
+                </div>
+            </div>
+
+            <!-- Teacher Resources Dropdown -->
+            <div class="dropdown relative">
+                <div class="flex items-center space-x-1 cursor-pointer">
+                    <span>Teacher Resources</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="dropdown-menu">
+                    <a href="subpage 3.html">Classroom Exercises</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Search Bar with Icon Inside -->
+        <div class="flex items-center border border-black px-3 py-1 rounded">
+            <input type="text" placeholder="Search" class="border-none outline-none w-32">
+            <button class="text-black"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <!-- Static Banner Section (No Animation) -->
+    <div class="banner relative w-full h-64 overflow-hidden">
+        <img src="Resources/Images/Banner.png" alt="Banner Image" class="w-full h-full object-cover">
+    </div>
+
+    <main class="px-8 py-6">
+        <section class="mt-8">
+            <h1 class="text-center text-4xl font-bold mb-4">Prioritizing Student Health</h1>
+            <h2 class="text-center text-2xl font-bold mb-4">Understanding the problem</h2>
+            <p class="text-justify mb-6">
+                Students between the ages of 14 and 18 often experience increased academic pressure due to the demands of schoolwork, exams, and extracurricular commitments. This focus on academics can lead to the neglect of physical health, as students spend extended periods sitting in classrooms or studying without incorporating physical activity into their routines. Prolonged inactivity can result in physical issues such as poor posture, muscle stiffness, eye strain from long screen hours, and a gradual decline in overall fitness levels. Over time, these factors can contribute to more serious health concerns, including cardiovascular problems and decreased energy levels. Teachers also face challenges in maintaining student engagement during long classes, as extended periods without movement can reduce concentration and productivity. This problem affects both physical well-being and the ability to perform effectively in academic settings.
+            </p>
+            <h2 class="text-center text-2xl font-bold mb-4">What can be done?</h2>
+            <p class="text-justify mb-6">
+                To address the issue of health neglect caused by academic pressure, integrating regular physical activity into daily routines is a practical solution. This website provides resources for both students and teachers to incorporate exercise without significantly disrupting academic schedules. For students, the platform includes do-at-home fitness exercises and a gym workout planner that allows for structured physical activity. For teachers, there is a guide outlining how to implement short study breaks and simple in-class exercises to help improve student focus and reduce physical strain. These solutions aim to provide accessible ways to incorporate movement into everyday routines, promoting a balance between academic responsibilities and physical health.
+            </p>
+
+            <!-- Quote Section with Left and Top Borders -->
+            <div class="quote-container mt-6 p-4 relative">
+                <div class="quote-border"></div>
+                <i class="fas fa-quote-left text-6xl pr-4"></i>
+                <p class="text-justify pl-12 text-3xl italic">
+                    Your body is designed to move. Don't let it become a piece of furniture
+                </p>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

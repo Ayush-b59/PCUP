@@ -1,0 +1,213 @@
+<html>
+<head>
+    <title>Webpage Mockup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Dropdown Styles */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid black;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            min-width: 200px;
+            z-index: 1000;
+            border-radius: 8px;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 12px;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            white-space: nowrap;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: lightgray;
+        }
+
+        /* Table Styles */
+        .exercise-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .exercise-table th, .exercise-table td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .exercise-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        .exercise-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .editable-cell {
+            min-width: 100px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body class="bg-white">
+
+    <header class="flex items-center justify-between px-4 py-2 shadow-md">
+        <div class="flex items-center">
+            <a href="Homepage.html">
+                <img src="logo.png" alt="Logo" class="w-16 h-16">
+            </a>
+        </div>
+
+        <nav class="flex-grow flex justify-center space-x-12 text-lg relative nav-links">
+            <div class="dropdown relative">
+                <div class="flex items-center space-x-1 cursor-pointer">
+                    <span>Student Resources</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="dropdown-menu">
+                    <a href="subpage.html">At-Home Workout</a>
+                    <a href="Subpage 2.html">Gym Workout</a>
+                </div>
+            </div>
+
+            <div class="dropdown relative">
+                <div class="flex items-center space-x-1 cursor-pointer">
+                    <span>Teacher Resources</span>
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="dropdown-menu">
+                    <a href="subpage 3.html">Classroom Exercises</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="flex items-center border border-black px-3 py-1 rounded">
+            <input type="text" placeholder="Search" class="border-none outline-none w-32">
+            <button class="text-black"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <div class="max-w-5xl mx-auto px-6 py-10 min-h-screen">
+
+        <!-- Top Border Line -->
+        <div class="flex justify-between items-center">
+            <div class="border border-black w-full mb-10"></div>
+        </div>
+
+        <!-- First Content Block -->
+        <div class="grid grid-cols-2 gap-12">
+            <div>
+                <p class="text-base text-black leading-relaxed">
+                    Gym workouts provide structure and access to equipment that targets strength, endurance, and flexibility. Students can use machines, weights, or cardio equipment to meet personal goals while relieving academic stress. Gyms also offer motivation through a supportive environment and often provide guidance from trainers to help create effective workout plans. Scheduling regular gym sessions encourages discipline and offers a healthy outlet for stress relief. Over time, consistent gym use promotes lifelong fitness habits and improved overall health.
+                </p>
+            </div>
+            <div>
+                <!-- Placeholder Box -->
+                <div class="w-full h-64 bg-gray-200 flex items-center justify-center rounded-lg shadow-lg">
+                    <span class="text-gray-500">Image Placeholder</span>
+                </div>
+                <p class="text-center mt-2 text-sm font-semibold text-black">Picture 6.1</p>
+            </div>
+        </div>
+
+        <!-- Second Content Block -->
+        <div class="mt-12 grid grid-cols-2 gap-12">
+            <div>
+                <!-- Editable Exercise Table -->
+                <table class="exercise-table" id="exerciseTable">
+                    <thead>
+                        <tr>
+                            <th>Day of the Week</th>
+                            <th>Exercise</th>
+                            <th>Duration</th>
+                            <th>Repetitions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 7 Editable Rows -->
+                        <tr><td contenteditable="true" class="editable-cell"></td><td contenteditable="true" class="editable-cell"></td><td contenteditable="true" class="editable-cell"></td><td contenteditable="true" class="editable-cell"></td></tr>
+                        <tr><td contenteditable="true" class="editable-cell"></td><td contenteditable="true" class="editable-cell"></td><td contenteditable="true" class="editable-cell"></td><td contenteditable="true" class="editable-cell"></td></tr>
+                        <tr><td contenteditable="true" class="editable-cell"></td><td contenteditable="true" class="editable-cell"></td><td contenteditable="true" class="editable-cell"></td><td contenteditable="true" class="editable-cell"></td></tr>
+                        <tr><td contenteditable="true" class="editable-cell"></td><td contenteditable="true" class="editable-cell"></td><td contenteditable="true" class="editable-cell"></td><td contenteditable="true" class="editable-cell"></td></tr>
+                        <tr><td contenteditable="true" class="editable-cell"></td><td contenteditable="true" class="editable-cell"></td><td contenteditable="true" class="editable-cell"></td><td contenteditable="true" class="editable-cell"></td></tr>
+                        <tr><td contenteditable="true" class="editable-cell"></td><td contenteditable="true" class="editable-cell"></td><td contenteditable="true" class="editable-cell"></td><td contenteditable="true" class="editable-cell"></td></tr>
+                        <tr><td contenteditable="true" class="editable-cell"></td><td contenteditable="true" class="editable-cell"></td><td contenteditable="true" class="editable-cell"></td><td contenteditable="true" class="editable-cell"></td></tr>
+                    </tbody>
+                </table>
+                <p class="text-center mt-2 text-sm font-semibold text-black">Table 6.2</p>
+            </div>
+            <div>
+                
+                <h2 class="text-2xl font-semibold text-black mb-4">How to Use the Exercise Table:</h2>
+                <ul class="list-disc ml-8 text-base text-black leading-relaxed mb-6">
+                    <li>Write down the exercises you want to do and on which day</li>
+                    <li>Adjust the sets and reps based on your comfort </li>
+                    <li>Try to include both strength and cardio in your routine</li>
+                    <li>Aim for at least 30 minutes of activity, 3-5 times per week</li>
+                </ul>
+    
+                <h3 class="text-xl font-semibold text-black mb-2">Tips for Getting Started:</h3>
+                <ul class="list-disc ml-8 text-base text-black leading-relaxed">
+                    <li>Set a consistent workout schedule</li>
+                    <li>Start with a 5-minute warm-up</li>
+                    <li>Focus on form to avoid injuries</li>
+                    <li>Cool down with stretches after exercising</li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const table = document.getElementById("exerciseTable");
+        const storageKey = "exerciseTableData_Subpage2"; // Unique key for Subpage 2
+    
+        // Load saved data from local storage when the page loads
+        window.onload = function() {
+            const savedData = localStorage.getItem(storageKey);
+            if (savedData) {
+                const rows = JSON.parse(savedData);
+                rows.forEach((rowData, rowIndex) => {
+                    const cells = table.rows[rowIndex + 1]?.cells; // Skip header row
+                    if (cells) {
+                        rowData.forEach((cellData, cellIndex) => {
+                            cells[cellIndex].innerText = cellData;
+                        });
+                    }
+                });
+            }
+        };
+    
+        // Save table data to local storage
+        function saveTableData() {
+            const rows = [];
+            for (let i = 1; i < table.rows.length; i++) { // Skip header row
+                const cells = Array.from(table.rows[i].cells).map(cell => cell.innerText.trim());
+                rows.push(cells);
+            }
+            localStorage.setItem(storageKey, JSON.stringify(rows));
+        }
+    
+        // Listen for changes and save automatically
+        table.addEventListener("input", saveTableData);
+    </script>    
+
+</body>
+</html>
